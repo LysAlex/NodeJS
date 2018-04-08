@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    header
+    div#main
+        section(id='top', class='one dark cover')      
+            h2.alt Insertion d'une offre
+            br
+            form(name='addOffer',method='post',action='../offers/addoffer')
+                div.row
+                    div(class='12u$')
+                        input(type='text',placeholder="Nom Evenement",name='nom_evenement')
+                    div(class='6u 12u$(mobile)')
+                        <p> <STRONG> Type évenement </STRONG> <SELECT name="type_evenement">  
+                        <OPTION> Spectacle
+                        <OPTION> Film
+                        </SELECT>
+                        </p>
+                        input(type="text", placeholder="Nombre de Jours", name="nombre_jours")
+                    div(class='12u$')
+                        input(type="text", placeholder="Date de début", name="date_debut")
+                    div(class='12u$')
+                        input(type="text", placeholder="Nombre de figurants", name="nombre_figurant")
+                    div(class='12u$')
+                        input(type="text", placeholder="Nom du rôle", name="nom_role")
+                    div(class='12u$')
+                        input(type='submit')
+    footer

@@ -1,0 +1,38 @@
+extends layout
+block content
+   div#header
+      div.top
+         div#logo
+            span(class='image avatar48')
+               img(src='/images/avatar.jpg', alt='')
+            h1#title FaceCast
+            p Un site NodeJS
+         nav#nav
+            ul
+               li
+                  a(href='/', id='top-link', class='icon fa-home') &nbsp;Intro
+            ul
+               li
+                  a(href='/offers', id='songs-link', class='icon fa-users') &nbsp;Offres
+            ul
+               li
+                  a(href='/state', id='users-link', class='skel-layers-ignoreHref')
+                  span(class='icon fa-star') &nbsp;Etat
+            ul
+               li
+                  a(href='/figurant', id='users-link', class='icon fa-user') &nbsp;Inscrits 
+      div.bottom
+   div#main
+      section(id='top', class='one dark cover')
+         div.container
+            header
+               h2.alt Liste des candidatures
+               br
+               <table>
+               <tr>
+               <th> Figurant </th>
+               <th> Clé </th>
+               <th> Etat </th>
+               </tr>
+            </table>
+            <footer>

@@ -1,0 +1,31 @@
+extends layout
+block content
+  div#header
+    div.top
+      div#logo
+        span(class='image avatar48')
+          img(src='/images/avatar.jpg', alt='')
+        h1#title #{title}
+        p Un site NodeJS 
+    
+    div.bottom
+  div#main
+
+    section(id='contact', class='four')
+      div.container
+
+        header
+          h2.alt Inscription utilisateur 
+          br
+          form(action="/register", method="post")
+          div.row
+            div(class='12u$')
+              input(type='text', name="username", placeholder='Login')
+            div(class='12u$')
+              input(type='password', name="password", placeholder='Mot de passe')
+            div(class='12u$')
+              input(type='password', name="verify", placeholder='Vérification') 
+            div(class='12u$')
+              input(type='submit')
+
+        footer    

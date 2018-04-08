@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    header
+    div#main
+        section(id='top', class='one dark cover')      
+            h2.alt Insertion d'une offre
+            br
+            form(name='updateOffer',method='post',action='../update/:id/check')
+                div.row
+                    div(class='12u$')
+                        input(type='text',placeholder="Nom Evenement",name='nom_evenement', value= offerslist.nom_evenement)
+                    div(class='6u 12u$(mobile)')
+                        <p> <STRONG> Type évenement </STRONG> <SELECT name="type_evenement" 
+                        <OPTION> Spectacle
+                        <OPTION> Film
+                        </SELECT> 
+                        </p>
+                        input(type="text", placeholder="Nombre de Jours", name="nombre_jours", value=offerslist.nombre_jours)
+                    div(class='12u$')
+                        input(type="text", placeholder="Date de début", name="date_debut", value=offerslist.date_debut)
+                    div(class='12u$')
+                        input(type="text", placeholder="Nombre de figurants", name="nombre_figurant", value=offerslist.nombre_figurant)
+                    div(class='12u$')
+                        input(type="text", placeholder="Nom du rôle", name="nom_role", value=offerslist.nom_role)
+                    div(class='12u$')
+                        input(type='submit')
+    footer

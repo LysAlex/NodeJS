@@ -1,0 +1,61 @@
+extends layout
+block content
+   div#header
+      div.top
+         div#logo
+            span(class='image avatar48')
+               img(src='/images/avatar.jpg', alt='')
+            h1#title FaceCast
+            p Un site NodeJS
+         nav#nav
+            ul
+               li
+                  a(href='/', id='top-link', class='icon fa-home') &nbsp;Intro
+            ul
+               li
+                  a(href='/offers', id='songs-link', class='skel-layers-ignoreHref') 
+                  span(class='icon fa-users ') &nbsp;Offres 
+            ul
+               li
+                  a(href='/state', id='users-link', class='icon fa-star') &nbsp;Etat
+            ul
+               li
+                  a(href='/users', id='users-link', class='icon fa-user') &nbsp;Inscrits                  
+      div.bottom
+   div#main
+      section(id='top', class='one dark cover')
+         div.container
+            header
+               h2.alt Liste des offres
+               br
+               <table>
+               <tr>
+               <th> Nom de l'événement </th>
+               <th> Type de l'événement </th>
+               <th> Nombre de jours </th>
+               <th> Date du début </th>
+               <th> Nombre de figurants </th>
+               <th> Nom du rôle </th>
+               </tr>
+            ul
+               each offre, i in offerslist
+                  tr
+                  td
+                     = offre.nom_evenement
+                  td 
+                     = offre.type_evenement 
+                  td
+                     = offre.nombre_jours 
+                  td
+                     = offre.date_debut 
+                  td
+                     = offre.nombre_figurant 
+                  td
+                     = offre.nom_role
+                  td
+                     a(href='offers/removeoffer/'+ offre._id, class = 'icon fa-eraser', title = 'DELETE')
+                  td
+                     a(href='offers/update/'+ offre._id, class = 'icon fa-users', title = 'UPDATE') 
+            </table>
+            <footer>
+                <a href="/offers/insert" class="button scrolly"> Ajouter une offre </a>      

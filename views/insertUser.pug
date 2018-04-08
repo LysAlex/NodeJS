@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    header
+    div#main
+        section(id='top', class='one dark cover')      
+            h2.alt Insertion d'un utilisateur
+            br
+            form(name='addUser',method='post',action='../users/adduser')
+                div.row
+                    div(class='12u$')
+                        input(type='text',placeholder="Prénom",name='firstName')
+                    div(class='12u$')
+                        input(type='text',placeholder="Nom",name='lastName')
+                    div(class='12u$')
+                        input(type='text',placeholder="Email",name='email')
+                        input(type='submit')
+    footer

@@ -1,0 +1,17 @@
+extends layout
+block content
+		h1 Validation de l'offre de : #{lastName} #{firstName} pour le role de : #{nom_role}
+
+		form(name='validate_offer',method="post", action='/offres_roles/validation/'+id+'/update')
+			p Nom de l'evenement : #{nom_evenement}
+			p Votre choix  (l'etat actuel : #{etat} )
+			input(type='hidden', name ='_method', value='put')
+			input(type='radio', name='choix', value='Accepter')
+			|  Accecpter
+			input(type='radio', name='choix', value='Refuser')
+			|  Refuser
+			input(type='radio', name='choix', value='Retenu')
+			|  Retenu
+			input(type='radio', name='choix', value='En attente', checked="checked")
+			|  En attente
+			button(type="submit") Confirmer 

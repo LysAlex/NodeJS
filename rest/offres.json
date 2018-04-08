@@ -1,0 +1,32 @@
+{
+    "offre": [
+{
+        "nom_evenement": "Tireur",
+        "type_evenement": "Spectacle",
+        "nombre_jours" : 27,
+        "date_debut" : "1/11/1995",
+        "nombre_figurant" : 4,
+        "nom_role" : "Jacques Pote",
+        "firstName" : "Bruce",
+        "lastName": "Bob"
+},{
+        "nom_evenement": "Tireur",
+        "type_evenement": "Spectacle",
+        "nombre_jours" : 27,
+        "date_debut" : "10/12/2017",
+        "nombre_figurant" : 4,
+        "nom_role" : "Jacques Pote",
+        "firstName" : "Chan",
+        "lastName": "Jackie"
+},{
+        "nom_evenement": "Tireur",
+        "type_evenement": "Spectacle",
+        "nombre_jours" : 27,
+        "date_debut" : "6/12/2017",
+        "nombre_figurant" : 4,
+        "nom_role" : "Jacques Pote",
+        "firstName" : "Chan",
+        "lastName": "Jackie"
+}
+]
+}
